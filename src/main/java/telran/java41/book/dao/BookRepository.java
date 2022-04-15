@@ -9,5 +9,9 @@ import telran.java41.book.model.Book;
 public interface BookRepository extends JpaRepository<Book, Long>{
 	
 	Stream<Book> findByAuthorsName(String name);
+	
+	Stream<Book> findByPublisherPublisherName(String publisherName);
+	
+	void deleteByAuthorsName(String name);
 
 }
